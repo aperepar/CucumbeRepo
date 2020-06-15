@@ -25,7 +25,7 @@ public class StepDefinitionGeneral {
 	@Given("^Ingresa a la pagina de viaje$")
 	public void ingresa_a_la_pagina_de_viaje() {
 		driver.get("http://newtours.demoaut.com/");
-		logger.log("Se ingresa a la pagina.");
+		logger.log("Se ingresa a la pagina..");
 	}
 	
 	@When("^Obtiene el titulo de la pagina$")
