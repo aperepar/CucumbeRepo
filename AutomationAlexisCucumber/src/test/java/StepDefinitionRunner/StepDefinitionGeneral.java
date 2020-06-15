@@ -16,6 +16,7 @@ import utilities.logger;
 public class StepDefinitionGeneral {
 	WebDriver driver;
 	String logoInicio;
+	String xpathlogo = "//img[@src='/images/nav/logo.gif";
 	
 	public StepDefinitionGeneral(DriverFactory webdriver) {
 		driver = webdriver.open();
@@ -30,9 +31,8 @@ public class StepDefinitionGeneral {
 	
 	@When("^Obtiene el titulo de la pagina$")
 	public void obtiene_el_titulo_de_la_pagina() {
-		logoInicio = driver.findElement(By.xpath("//img[@src='/images/nav/logo.gif']")).getAttribute("alt");
-		//logger.log(logoInicio);
-		//logoInicio.isEnabled();
+		logoInicio = driver.findElement(By.xpath(xpathlogo)).getAttribute("alt");
+		
 	}
 	
 	@Then("^Valida que ingreso correctamente$")

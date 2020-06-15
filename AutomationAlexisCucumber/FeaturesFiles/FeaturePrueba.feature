@@ -1,6 +1,6 @@
 Feature: Primer escenario de prueba cucumber
 
-@correr1
+
 Scenario: Entrar a pagina de viaje y validar apertura
 Given Ingresa a la pagina de viaje
 When Obtiene el titulo de la pagina

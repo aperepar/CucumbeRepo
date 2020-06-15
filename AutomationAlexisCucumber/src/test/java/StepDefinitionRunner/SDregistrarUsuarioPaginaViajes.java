@@ -17,6 +17,7 @@ public class SDregistrarUsuarioPaginaViajes {
 
     WebDriver driver;
     WebElement registroExitoso;
+    String firstName = "//input[@name='firstName']";
 
 	public SDregistrarUsuarioPaginaViajes(DriverFactory webdriver){
 		driver = webdriver.open();
@@ -25,7 +26,8 @@ public class SDregistrarUsuarioPaginaViajes {
  
 	@When("^Ingresar nombre \"([^\"]*)\"$")
 	public void ingresar_nombre(String nombre) throws InterruptedException{
-		driver.findElement(By.name("firstName")).sendKeys(nombre);	
+		//driver.findElement(By.name("firstName")).sendKeys(nombre);
+		driver.findElement(By.xpath(firstName)).sendKeys(nombre);
 	}
 	
 	@When("^Ingresar apellido \"([^\"]*)\"$")
