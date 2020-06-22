@@ -6,7 +6,7 @@ Given Ingresa a la pagina de viaje
 When Obtiene el titulo de la pagina
 Then Valida que ingreso correctamente
 
-@correr1
+
 Scenario: Entrar a pagina de viaje, registrar usuario y validar registro exitoso
 Given Ingresa a la pagina de viaje
 Given Acceder al formulario de registro
@@ -23,3 +23,12 @@ When Ingresar username "aperepar"
 When Ingresar password "12345"
 When Click a boton de registo
 Then Validar registro de usuario
+
+@correr1
+Scenario: Entrar a la pagina de viajes, ir a la seccion de hoteles y comprobar que esta en construccion la seccion
+Given Ingresa a la pagina de viaje
+When Se dirige a la seccion de "Vacations"
+Then Validar que la seccion se encuentre en construccion
+
+
+

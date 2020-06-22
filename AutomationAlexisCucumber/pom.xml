@@ -22,8 +22,8 @@
            <groupId>info.cukes</groupId>
            <artifactId>cucumber-junit</artifactId>
            <version>1.2.0</version>
-       </dependency>
-	<dependency>
+     </dependency>
+		<dependency>
     		<groupId>junit</groupId>
    	   	 	<artifactId>junit</artifactId>
     		<version>4.13</version>
@@ -45,6 +45,11 @@
 		    <version>1.2.0</version>
 		    <scope>test</scope>
 		</dependency>
+		<dependency>
+  			 <groupId>commons-io</groupId>
+ 			 <artifactId>commons-io</artifactId>
+   			<version>2.6</version>
+	</dependency>
 		
 	</dependencies>
 	<build>

@@ -9,8 +9,7 @@ import org.openqa.selenium.support.ui.Select;
 
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import utilities.DriverFactory;
-import utilities.logger;
+import utilities.SeleniumUtilitario;
 
 
 public class SDregistrarUsuarioPaginaViajes {
@@ -19,7 +18,7 @@ public class SDregistrarUsuarioPaginaViajes {
     WebElement registroExitoso;
     String firstName = "//input[@name='firstName']";
 
-	public SDregistrarUsuarioPaginaViajes(DriverFactory webdriver){
+	public SDregistrarUsuarioPaginaViajes(SeleniumUtilitario webdriver){
 		driver = webdriver.open();
 	}
 	
@@ -92,11 +91,11 @@ public class SDregistrarUsuarioPaginaViajes {
 	public void validar_registro_de_usuario()  throws InterruptedException{
 		registroExitoso= driver.findElement(By.xpath("//font[contains(.,'Thank you for registering')]"));
 		String textoUsername = driver.findElement(By.xpath("//b[contains(text(),' Note: Your user name is aperepar.')]")).getText();
-		logger.log(textoUsername);
+		SeleniumUtilitario.log(textoUsername);
 		if(registroExitoso.isDisplayed()) {
-			logger.log("Registro de usuario exitoso!");
+			SeleniumUtilitario.log("Registro de usuario exitoso!");
 		}else {
-			logger.log("No se registro el usuario");
+			SeleniumUtilitario.log("No se registro el usuario");
 		}
 		
 	}
