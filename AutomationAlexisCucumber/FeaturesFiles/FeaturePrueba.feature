@@ -24,11 +24,26 @@ When Ingresar password "12345"
 When Click a boton de registo
 Then Validar registro de usuario
 
-@correr1
+
 Scenario: Entrar a la pagina de viajes, ir a la seccion de hoteles y comprobar que esta en construccion la seccion
 Given Ingresa a la pagina de viaje
 When Se dirige a la seccion de "Vacations"
 Then Validar que la seccion se encuentre en construccion
 
+@correr1
+Scenario: Entrar a la pagina SauceDemo, ingresar usuario, contrasena y loguear
+Given Ingresa a la pagina de SauceDemo
+When Se completa campo Usuario con "standard_user"
+When Se completa campo Contrasena con "secret_sauce"
+When Se realiza click en boton Login
+Then Validar logueo exitoso
+
+@correr2
+Scenario: Entrar a la pagina SauceDemo, ingresar contrasena, usuario y loguear
+Given Ingresa a la pagina de SauceDemo
+When Se completa campo Contrasena con "standard_user"
+When Se completa campo Usuario con "secret_sauce"
+When Se realiza click en boton Login
+Then Validar logueo exitoso
 
 

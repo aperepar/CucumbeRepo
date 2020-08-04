@@ -9,7 +9,7 @@ import cucumber.api.junit.Cucumber;
 	@CucumberOptions(
 	monochrome=true,
 	//dryRun=true,
-	tags="@correr1", features= "FeaturesFiles",glue= "StepDefinitionRunner",
+	tags="@correr2", features= "FeaturesFiles",glue= "StepDefinitionRunner",
 	plugin= {"pretty",
 			"html:target/cucumber-htmlreport",
 			"json:target/cucumber-report1.json",
