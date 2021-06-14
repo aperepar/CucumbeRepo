@@ -7,6 +7,7 @@ When Obtiene el titulo de la pagina
 Then Valida que ingreso correctamente
 
 #Prueba1
+#Prueba1
 Scenario: Entrar a pagina de viaje, registrar usuario y validar registro exitoso
 Given Ingresa a la pagina de viaje
 Given Acceder al formulario de registro
